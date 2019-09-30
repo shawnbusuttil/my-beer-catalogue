@@ -1,0 +1,58 @@
+.beer-detail {
+	height: 500px;
+	display: flex;
+	position: relative;
+
+	> * {
+		width: 50%;
+		padding: 30px 20px;
+	}
+	
+	&-image {
+		object-fit: contain;
+	}
+
+	&-info {
+		display: flex;
+		text-align: center;
+		overflow-y: scroll;
+		flex-direction: column;
+		justify-content: space-between;
+
+		> * {
+			margin: 5px 0;
+		}
+
+		&-name {
+			font-weight: 600;
+			font-size: 1.6rem;
+		}
+
+		&-description {
+			margin: 20px 0;
+			line-height: 1rem;
+		}
+
+		&-pairings {
+			line-height: 1rem;
+		}
+	}
+}
+
+@media (max-width: 425px) {
+	.beer-detail {
+		flex-direction: column-reverse;
+
+		> * {
+			width: 100%;
+		}
+
+		&-image {
+			height: 45%;
+		}
+
+		&-info {
+			height: 55%;
+		}
+	}
+}
